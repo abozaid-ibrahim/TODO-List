@@ -1,6 +1,6 @@
 //
 //  TODO_ListUITestsLaunchTests.swift
-//  TODO ListUITests
+//  TODO: ListUITests
 //
 //  Created by abuzeid on 15.12.23.
 //
@@ -8,7 +8,6 @@
 import XCTest
 
 final class TODO_ListUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

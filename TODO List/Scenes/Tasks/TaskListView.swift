@@ -1,29 +1,24 @@
 //
 //  MainView.swift
-//  TODO List
+//  TODO: List
 //
 //  Created by abuzeid on 15.12.23.
 //
 
 import SwiftUI
-struct MainView: View {
-    @StateObject private var viewModel = ToDoListViewModel()
+
+struct TaskListView: View {
+    @StateObject private var viewModel = TaskListViewModel()
     @State private var showingEditScreen = false
     @State private var currentParentId: UUID?
 
     var body: some View {
         NavigationView {
-            List {
-                OutlineGroup(viewModel.items, children: \.subtasks) { item in
-                    HStack {
-                        Button(action: {
-                            viewModel.toggleTaskCompletion(item)
-                        }) {
-                            Image(systemName: item.isCompleted ? "checkmark.circle.fill" : "checkmark.circle")
-                        }
-                        Text(item.title)
-                    }
-                }
+            List(viewModel.items, id: \.self) { task in
+                TaskRowView(task: task,
+                            onAddSubtask: edit(taskId:),
+                            onDelete: viewModel.deleteTask(withId:),
+                            onComplete: viewModel.toggleTaskCompletion(_:))
             }
             .navigationBarTitle("ToDo List")
             .navigationBarItems(trailing: Button(action: {
@@ -40,9 +35,13 @@ struct MainView: View {
             }
         }
     }
+
+    private func edit(taskId: UUID) {
+        showingEditScreen = true
+        currentParentId = taskId
+    }
 }
 
-
 #Preview {
-    MainView()
+    TaskListView()
 }

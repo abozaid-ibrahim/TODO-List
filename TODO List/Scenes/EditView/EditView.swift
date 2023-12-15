@@ -1,16 +1,16 @@
 //
 //  EditView.swift
-//  TODO List
+//  TODO: List
 //
 //  Created by abuzeid on 15.12.23.
 //
 
+import Combine
 import Foundation
 import SwiftUI
-import Combine
 
 struct EditView: View {
-    var onSave: (ToDoItem) -> Void
+    var onSave: TaskCompletionClosure
     @State private var title: String = ""
     @Environment(\.presentationMode) var presentationMode
 
@@ -21,8 +21,7 @@ struct EditView: View {
             }
             .navigationBarTitle("Add Task")
             .navigationBarItems(trailing: Button("Save") {
-                let newTask = ToDoItem(id: UUID(), title: title, isCompleted: false, level: 0, subtasks: [])
-                onSave(newTask)
+                onSave(TaskItem(title: title))
                 presentationMode.wrappedValue.dismiss()
             }.disabled(title.isEmpty))
         }

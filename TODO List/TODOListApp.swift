@@ -1,6 +1,6 @@
 //
-//  TODO_ListApp.swift
-//  TODO List
+//  TODOListApp.swift
+//  TODO: List
 //
 //  Created by abuzeid on 15.12.23.
 //
@@ -11,7 +11,7 @@ import SwiftUI
 struct TODO_ListApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TaskListView()
         }
     }
 }
