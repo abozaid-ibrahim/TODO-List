@@ -14,6 +14,7 @@
 		6C69D2122B2C904500CC2C17 /* TODO_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69D2112B2C904500CC2C17 /* TODO_ListTests.swift */; };
 		6C69D21C2B2C904500CC2C17 /* TODO_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69D21B2B2C904500CC2C17 /* TODO_ListUITests.swift */; };
 		6C69D21E2B2C904500CC2C17 /* TODO_ListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69D21D2B2C904500CC2C17 /* TODO_ListUITestsLaunchTests.swift */; };
+		6C6C6A302B2C9F5600525252 /* ToDoItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C6A2F2B2C9F5600525252 /* ToDoItemRow.swift */; };
 		6CA5D81D2B2C916100A917D3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5D81C2B2C916100A917D3 /* Task.swift */; };
 		6CA5D8222B2C91B000A917D3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5D8212B2C91B000A917D3 /* EditView.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		6C69D2172B2C904500CC2C17 /* TODO ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TODO ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C69D21B2B2C904500CC2C17 /* TODO_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO_ListUITests.swift; sourceTree = "<group>"; };
 		6C69D21D2B2C904500CC2C17 /* TODO_ListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO_ListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6C6C6A2F2B2C9F5600525252 /* ToDoItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemRow.swift; sourceTree = "<group>"; };
 		6CA5D81C2B2C916100A917D3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		6CA5D8212B2C91B000A917D3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 			children = (
 				6C69D2022B2C904300CC2C17 /* MainView.swift */,
 				6CA5D81C2B2C916100A917D3 /* Task.swift */,
+				6C6C6A2F2B2C9F5600525252 /* ToDoItemRow.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				6C69D2032B2C904300CC2C17 /* MainView.swift in Sources */,
 				6CA5D81D2B2C916100A917D3 /* Task.swift in Sources */,
+				6C6C6A302B2C9F5600525252 /* ToDoItemRow.swift in Sources */,
 				6CA5D8222B2C91B000A917D3 /* EditView.swift in Sources */,
 				6C69D2012B2C904300CC2C17 /* TODO_ListApp.swift in Sources */,
 			);

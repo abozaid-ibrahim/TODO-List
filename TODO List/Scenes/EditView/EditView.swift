@@ -9,10 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-
 struct EditView: View {
-    @Binding var parentId: UUID?
-    var item: ToDoItem?
     var onSave: (ToDoItem) -> Void
     @State private var title: String = ""
     @Environment(\.presentationMode) var presentationMode
@@ -22,17 +19,12 @@ struct EditView: View {
             Form {
                 TextField("Title", text: $title)
             }
-            .navigationBarTitle(item == nil ? "Add Task" : "Edit Task")
+            .navigationBarTitle("Add Task")
             .navigationBarItems(trailing: Button("Save") {
-                let newTask = ToDoItem(id: UUID(), title: title, isCompleted: false, subtasks: [])
+                let newTask = ToDoItem(id: UUID(), title: title, isCompleted: false, level: 0, subtasks: [])
                 onSave(newTask)
                 presentationMode.wrappedValue.dismiss()
-            }.disabled(title.isEmpty || title == item?.title))
-        }
-        .onAppear {
-            if let item = item {
-                title = item.title
-            }
+            }.disabled(title.isEmpty))
         }
     }
 }
