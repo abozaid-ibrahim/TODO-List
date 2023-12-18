@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct TaskItem: Identifiable, Equatable, Hashable {
+struct TaskItem: Identifiable, Equatable, Hashable, Codable {
     let id: UUID
     var title: String
     var isCompleted: Bool
-    var parentId: UUID? // Optional, as root tasks won't have a parentId.
+    let parentId: UUID? // Optional, as root tasks won't have a parentId.
     var subtasks: [TaskItem]?
     init(id: UUID = UUID(), title: String, isCompleted: Bool = false, parentId: UUID? = nil, subtasks: [TaskItem]? = nil) {
         self.id = id
@@ -40,5 +40,9 @@ struct TaskItem: Identifiable, Equatable, Hashable {
         for index in indices {
             subtasks?[index].toggleCompletion()
         }
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

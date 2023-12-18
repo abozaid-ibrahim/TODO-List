@@ -23,6 +23,7 @@
 		6C6C6A4D2B2CBEB300525252 /* TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C6A382B2CBEB300525252 /* TODO.framework */; };
 		6C6C6A4E2B2CBEB300525252 /* TODO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C6A382B2CBEB300525252 /* TODO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C6C6A572B2CC3BB00525252 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C6A562B2CC3BB00525252 /* TreeView.swift */; };
+		6C6C6A5F2B2FFD3E00525252 /* TaskCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C6A5E2B2FFD3E00525252 /* TaskCacheManager.swift */; };
 		6CA5D81D2B2C916100A917D3 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5D81C2B2C916100A917D3 /* TaskItem.swift */; };
 		6CA5D8222B2C91B000A917D3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5D8212B2C91B000A917D3 /* EditView.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		6C6C6A412B2CBEB300525252 /* TODOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6C6A482B2CBEB300525252 /* TODOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOTests.swift; sourceTree = "<group>"; };
 		6C6C6A562B2CC3BB00525252 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
+		6C6C6A5E2B2FFD3E00525252 /* TaskCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCacheManager.swift; sourceTree = "<group>"; };
 		6CA5D81C2B2C916100A917D3 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		6CA5D8212B2C91B000A917D3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 		6C69D1FF2B2C904300CC2C17 /* TODO List */ = {
 			isa = PBXGroup;
 			children = (
+				6C6C6A5C2B2FFC7900525252 /* Modules */,
 				6CA5D81E2B2C916C00A917D3 /* Scenes */,
 				6C69D2002B2C904300CC2C17 /* TODOListApp.swift */,
 				6C69D2042B2C904500CC2C17 /* Assets.xcassets */,
@@ -219,6 +222,22 @@
 				6C6C6A482B2CBEB300525252 /* TODOTests.swift */,
 			);
 			path = TODOTests;
+			sourceTree = "<group>";
+		};
+		6C6C6A5C2B2FFC7900525252 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6C6C6A5D2B2FFC7D00525252 /* Caching */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6C6C6A5D2B2FFC7D00525252 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				6C6C6A5E2B2FFD3E00525252 /* TaskCacheManager.swift */,
+			);
+			path = Caching;
 			sourceTree = "<group>";
 		};
 		6CA5D81E2B2C916C00A917D3 /* Scenes */ = {
@@ -454,6 +473,7 @@
 			files = (
 				6C69D2032B2C904300CC2C17 /* TaskListView.swift in Sources */,
 				6C6C6A322B2CB52D00525252 /* TaskListViewModel.swift in Sources */,
+				6C6C6A5F2B2FFD3E00525252 /* TaskCacheManager.swift in Sources */,
 				6CA5D81D2B2C916100A917D3 /* TaskItem.swift in Sources */,
 				6C6C6A302B2C9F5600525252 /* TaskRowView.swift in Sources */,
 				6CA5D8222B2C91B000A917D3 /* EditView.swift in Sources */,

@@ -10,9 +10,13 @@ import Foundation
 import SwiftUI
 
 struct EditView: View {
-    var onSave: TaskCompletionClosure
+    private var onSave: TaskCompletionClosure
     @State private var title: String = ""
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode)
+    private var presentationMode
+    init(onSave: @escaping TaskCompletionClosure) {
+        self.onSave = onSave
+    }
 
     var body: some View {
         NavigationView {
